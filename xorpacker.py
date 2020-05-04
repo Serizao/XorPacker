@@ -3,6 +3,7 @@
 
 import sys
 import zlib
+import donut
 from random import randint
 from struct import pack
 
@@ -23,10 +24,13 @@ def xor(block):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage:", sys.argv[0], "<PE file>")
+        print("Usage:", sys.argv[1], "dotNet")
         exit(-1)
     pefile = sys.argv[1]
-    payload = open(pefile, 'rb').read()
-
+    if sys.argv[1] == null
+        payload = open(pefile, 'rb').read()
+    else
+        shellcode = donut.create(pefile)
     print("[*] Encrypting payload...")
     encrypted = xor(payload)
 
